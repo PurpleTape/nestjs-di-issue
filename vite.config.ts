@@ -2,7 +2,7 @@ import { builtinModules } from 'node:module';
 import { defineConfig } from 'vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 // @ts-ignore
-import babelPluginSyntaxDecorators from '@babel/plugin-syntax-decorators';
+import babelPluginProposalDecorators from '@babel/plugin-proposal-decorators';
 
 import { VitePluginNode } from 'vite-plugin-node';
 
@@ -12,7 +12,7 @@ const external = [...builtinModules, ...builtinModules.map((m) => `node:${m}`)];
 export default defineConfig(({ command }) => ({
   plugins: [
     vueJsx({
-      babelPlugins: [[babelPluginSyntaxDecorators, { version: 'legacy' }]],
+      babelPlugins: [[babelPluginProposalDecorators, { version: 'legacy' }]],
     }),
 
     ...VitePluginNode({
