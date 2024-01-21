@@ -1,0 +1,24 @@
+{
+  "extends": ["@tsconfig/node20/tsconfig.json", "@vue/tsconfig/tsconfig.json"],
+
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "noFallthroughCasesInSwitch": true,
+    "importHelpers": true,
+    "strictPropertyInitialization": false,
+
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "dist",
+
+    "lib": ["esnext"],
+
+    "types": ["vite/client", "node"]
+  },
+
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
+}
